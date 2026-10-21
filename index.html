@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>어나드범어 | 대구 수성구 범어동 프리미엄 아파트</title>
+    <meta name="description" content="대구 수성구 범어동 프리미엄 아파트 어나드범어" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+        :root {
+            --gold: #b8975a;
+            --navy: #14213d;
+            --ink: #1c1c1e;
+            --muted: #6b7280;
+            --bg: #faf8f4;
+            --line: #e5e0d6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans KR', sans-serif; color: var(--ink); background: #fff; line-height: 1.7; }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        .material-symbols-outlined { vertical-align: middle; font-size: 1.2em; }
+        .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 96px 0; }
+        .eyebrow { color: var(--gold); letter-spacing: .2em; text-transform: uppercase; font-size: .8rem; font-weight: 500; }
+        h2 { font-family: 'Noto Serif KR', serif; font-size: clamp(1.7rem, 4vw, 2.5rem); margin: 8px 0 12px; color: var(--navy); }
+        .sub { color: var(--muted); max-width: 640px; }
+        .center { text-align: center; }
+        .center .sub { margin: 0 auto; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: #fff; padding: 14px 28px; border: 0; border-radius: 4px; font: inherit; font-weight: 500; cursor: pointer; transition: .2s; }
+        .btn:hover { background: #9c7d44; }
+        .btn.ghost { background: transparent; border: 1px solid currentColor; }
+        .ph { background: linear-gradient(135deg, #d9d2c3, #b9b0a0); display: flex; align-items: center; justify-content: center; color: #fff; font-size: .9rem; text-align: center; }
+        .note { font-size: .8rem; color: var(--muted); margin-top: 6px; }
+
+        /* header */
+        header { position: fixed; inset: 0 0 auto 0; z-index: 50; background: rgba(20, 33, 61, .92); backdrop-filter: blur(6px); color: #fff; }
+        header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+        .logo { font-family: 'Noto Serif KR', serif; font-weight: 700; font-size: 1.3rem; letter-spacing: .05em; }
+        nav { display: flex; gap: 28px; font-size: .95rem; }
+        nav a:hover { color: var(--gold); }
+        header .btn { padding: 9px 18px; font-size: .9rem; }
+
+        /* hero */
+        .hero { min-height: 100vh; display: flex; align-items: center; color: #fff; text-align: center; padding-top: 68px;
+            background: linear-gradient(rgba(20, 33, 61, .65), rgba(20, 33, 61, .8)), linear-gradient(135deg, #3a4a6b, #14213d); position: relative; }
+        .hero h1 { font-family: 'Noto Serif KR', serif; font-size: clamp(2.4rem, 8vw, 4.6rem); margin: 12px 0; }
+        .hero h1 + p { font-size: 1.3rem; color: var(--gold); margin-bottom: 14px; }
+        .badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
+        .badges span { border: 1px solid rgba(255, 255, 255, .4); border-radius: 99px; padding: 8px 18px; font-size: .9rem; }
+        .scroll { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-size: .75rem; opacity: .7; text-align: center; }
+
+        /* overview */
+        .overview { background: var(--bg); }
+        .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 48px; }
+        .facts { list-style: none; }
+        .facts li { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+        .facts .material-symbols-outlined { color: var(--gold); }
+        .cta-box { margin-top: 64px; background: var(--navy); color: #fff; padding: 48px 24px; text-align: center; border-radius: 8px; }
+        .cta-box h3 { font-family: 'Noto Serif KR', serif; font-size: 1.6rem; margin-bottom: 8px; }
+        .cta-box p { margin-bottom: 20px; opacity: .85; }
+        .cta-box .tel { display: block; margin-top: 16px; color: var(--gold); }
+
+        /* cards */
+        .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; text-align: left; }
+        .card { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; transition: .2s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0, 0, 0, .08); }
+        .card .ph { height: 160px; }
+        .card div.body { padding: 20px; }
+        .card h3 { margin: 6px 0; font-size: 1.1rem; color: var(--navy); }
+        .card p { font-size: .9rem; color: var(--muted); }
+        .card .material-symbols-outlined { color: var(--gold); }
+        .visit { margin-top: 56px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+        .visit div { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+        /* plan */
+        .plan { background: var(--bg); }
+        .plan .ph { height: 380px; margin-top: 40px; border-radius: 8px; }
+        .feat { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+        .feat div { background: #fff; padding: 24px; border-radius: 8px; border: 1px solid var(--line); }
+        .feat .material-symbols-outlined { color: var(--gold); font-size: 2rem; }
+        .feat h3 { margin: 6px 0; color: var(--navy); }
+        .feat p { font-size: .9rem; color: var(--muted); }
+        .tabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 32px 0 0; }
+        .tabs button { border: 1px solid var(--line); background: #fff; padding: 8px 16px; border-radius: 99px; font: inherit; font-size: .9rem; cursor: pointer; }
+        .tabs button.on, .tabs button:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+        /* location */
+        .loc-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+        .loc-cards .card { padding: 28px; }
+        .loc-cards ul { list-style: none; margin-top: 14px; font-size: .9rem; }
+        .loc-cards li::before { content: "✓ "; color: var(--gold); }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; text-align: center; }
+        .stats strong { display: block; font-family: 'Noto Serif KR', serif; font-size: 2rem; color: var(--gold); }
+        .map { height: 280px; border-radius: 8px; margin-top: 40px; }
+
+        /* gallery */
+        .gallery { background: var(--bg); }
+        .g-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 32px; }
+        .g-item { position: relative; aspect-ratio: 4/3; border-radius: 6px; overflow: hidden; }
+        .g-item .ph { position: absolute; inset: 0; }
+        .g-item span.cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 12px; background: linear-gradient(transparent, rgba(0, 0, 0, .7)); color: #fff; font-size: .85rem; text-align: left; }
+        .g-item small { color: var(--gold); display: block; font-size: .7rem; }
+        .g-item.hide { display: none; }
+
+        /* membership */
+        .member { background: var(--navy); color: #fff; }
+        .member h2 { color: #fff; }
+        .member .sub { color: #cbd2e0; }
+        .m-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+        .tel-big { font-size: 2rem; color: var(--gold); font-weight: 700; margin: 4px 0 24px; display: block; }
+        .sched { list-style: none; }
+        .sched li { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(255, 255, 255, .15); }
+        .sched .material-symbols-outlined { color: var(--gold); }
+        .sched b { display: block; }
+        .sched small { color: #cbd2e0; }
+        form { background: #fff; color: var(--ink); padding: 32px; border-radius: 8px; }
+        form h3 { color: var(--navy); font-family: 'Noto Serif KR', serif; }
+        form p.d { font-size: .85rem; color: var(--muted); margin: 6px 0 18px; }
+        label.f { display: block; margin-bottom: 14px; font-size: .9rem; font-weight: 500; }
+        label.f input, label.f select { width: 100%; margin-top: 4px; padding: 12px; border: 1px solid var(--line); border-radius: 4px; font: inherit; }
+        .chk { font-size: .85rem; display: flex; gap: 8px; align-items: center; margin: 8px 0; }
+        form .btn { width: 100%; justify-content: center; margin-top: 12px; }
+
+        footer { background: #0d1526; color: #8d96a8; text-align: center; padding: 32px 20px; font-size: .85rem; }
+        footer a { margin: 0 8px; }
+
+        @media (max-width: 860px) {
+            nav { display: none; }
+            .grid2, .m-grid, .loc-cards, .feat { grid-template-columns: 1fr; }
+            .cards, .g-grid, .stats { grid-template-columns: repeat(2, 1fr); }
+            section { padding: 64px 0; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a href="#top" class="logo">어나드범어</a>
+            <nav>
+                <a href="#overview">사업안내</a>
+                <a href="#premium">프리미엄</a>
+                <a href="#plan">단지배치도</a>
+                <a href="#location">로케이션</a>
+                <a href="#gallery">갤러리</a>
+            </nav>
+            <a href="#member" class="btn">잔여호실 상담</a>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="wrap">
+                <p class="eyebrow">Honors Beomeo</p>
+                <h1>어나드범어,</h1>
+                <p>범어의 자부심 그 이상의 가치</p>
+                <p>대구의 중심에서 누리는 하이엔드 라이프스타일의 시작.<br>당신만을 위한 특별한 공간이 준비되어 있습니다.</p>
+                <div class="badges">
+                    <span><span class="material-symbols-outlined">directions_subway</span> 범어역 도보 1분</span>
+                    <span><span class="material-symbols-outlined">landscape</span> 영구 조망권</span>
+                    <span><span class="material-symbols-outlined">concierge</span> 호텔식 컨시어지</span>
+                </div>
+                <a href="#member" class="btn">잔여호실 상담 <span class="material-symbols-outlined">arrow_right_alt</span></a>
+                <p class="note" style="color:#cbd2e0">사전 예약 고객에게는 특별 혜택이 제공됩니다.</p>
+            </div>
+            <div class="scroll">Scroll Down<br><span class="material-symbols-outlined">keyboard_arrow_down</span></div>
+        </section>
+
+        <section class="overview center" id="overview">
+            <div class="wrap">
+                <p class="eyebrow">Premium Residential</p>
+                <h2>어나드범어</h2>
+                <p class="sub">어나드범어, 대구 수성구 범어동에서 품격의 차이를 만드는 새로운 기준</p>
+
+                <div style="margin-top:64px">
+                    <p class="eyebrow">Project Overview</p>
+                    <h2>사업개요</h2>
+                    <p class="sub">대구의 새로운 랜드마크, 어나드범어의 가치를 확인하세요.</p>
+                </div>
+
+                <div class="grid2" style="text-align:left">
+                    <div class="ph" style="height:360px;border-radius:8px">프로젝트 개요 이미지</div>
+                    <div>
+                        <p class="eyebrow">Premium Location</p>
+                        <ul class="facts">
+                            <li><span class="material-symbols-outlined">location_on</span> 수성구 범어동</li>
+                            <li><span class="material-symbols-outlined">domain</span> 사업명: 어나드범어 신축공사</li>
+                            <li><span class="material-symbols-outlined">map</span> 대지위치: 대구광역시 수성구 범어동 일원</li>
+                            <li><span class="material-symbols-outlined">straighten</span> 건축규모: 지하 6층 ~ 지상 37층</li>
+                            <li><span class="material-symbols-outlined">groups</span> 세대수: 공동주택 604세대 / 오피스텔 146실</li>
+                            <li><span class="material-symbols-outlined">directions_car</span> 주차대수: 세대당 2.17대(공동주택)</li>
+                            <li><span class="material-symbols-outlined">aspect_ratio</span> 대지면적: 17,598.80㎡</li>
+                        </ul>
+                        <p style="margin-top:20px"><a href="#plan" style="color:var(--gold)">상세 배치도 보기 <span class="material-symbols-outlined">arrow_right_alt</span></a></p>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h3>범어의 자부심, 지금 만나보세요</h3>
+                    <p>프리미엄 라이프스타일의 시작. 자세한 분양 일정과 혜택을 안내해 드립니다.</p>
+                    <a href="#member" class="btn">잔여호실 상담</a>
+                    <span class="tel">문의전화 000-0000-0000</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="center" id="premium">
+            <div class="wrap">
+                <p class="eyebrow">Premium Life</p>
+                <h2>어나드범어가 선사하는 특별한 가치</h2>
+                <p class="sub">범어의 중심에서 만나는 하이엔드 라이프스타일. 당신의 삶을 완벽하게 채워줄 네 가지 프리미엄을 확인하세요.</p>
+                <div class="cards">
+                    <article class="card"><div class="ph">이미지</div><div class="body"><span class="material-symbols-outlined">school</span><h3>명문 학군과 교통</h3><p>범어의 중심에서 누리는 쾌속 교통망과 대구 최고의 명문 학군이 만나는 교육의 중심지입니다.</p></div></article>
+                    <article class="card"><div class="ph">이미지</div><div class="body"><span class="material-symbols-outlined">fitness_center</span><h3>하이엔드 커뮤니티</h3><p>피트니스, 골프연습장, 프라이빗 라운지 등 입주민의 품격을 높여주는 전용 커뮤니티 시설을 제공합니다.</p></div></article>
+                    <article class="card"><div class="ph">이미지</div><div class="body"><span class="material-symbols-outlined">park</span><h3>친환경 조경 설계</h3><p>도심 속에서 사계절의 변화를 느끼며 힐링할 수 있는 테마 정원과 산책로가 조성됩니다.</p></div></article>
+                    <article class="card"><div class="ph">이미지</div><div class="body"><span class="material-symbols-outlined">security</span><h3>최첨단 스마트 시스템</h3><p>AI 기반의 통합 보안 시스템과 스마트폰으로 제어하는 홈 IoT로 안전하고 편리한 생활을 약속합니다.</p></div></article>
+                </div>
+                <div class="visit">
+                    <h3 style="color:var(--navy)">더 자세한 정보가 필요하신가요?</h3>
+                    <p class="sub">어나드범어의 프리미엄 가치를 모델하우스에서 직접 확인해보세요. 전문 상담사가 상세한 분양 정보를 안내해 드립니다.</p>
+                    <div>
+                        <a href="#member" class="btn"><span class="material-symbols-outlined">calendar_month</span> 방문 예약하기</a>
+                        <a href="#member" class="btn ghost" style="color:var(--navy)"><span class="material-symbols-outlined">call</span> 전화 상담</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="plan center" id="plan">
+            <div class="wrap">
+                <p class="eyebrow">Complex Plan</p>
+                <h2>단지 배치도</h2>
+                <p class="sub">어나드범어의 혁신적인 단지 설계를 확인하세요<br>최적의 배치로 완성된 프리미엄 라이프스타일</p>
+                <div class="ph">단지 배치도 이미지</div>
+                <div class="feat" style="text-align:left">
+                    <div><span class="material-symbols-outlined">fitness_center</span><h3>커뮤니티</h3><p>프리미엄 라이프스타일을 위한 다양한 커뮤니티 시설을 갖춘 단지 설계</p></div>
+                    <div><span class="material-symbols-outlined">smart_home</span><h3>AiQ 시스템</h3><p>스마트 홈 시스템으로 편리하고 안전한 생활 환경을 제공합니다</p></div>
+                    <div><span class="material-symbols-outlined">signal_cellular_alt</span><h3>이동통신 설비</h3><p>최적의 통신 환경을 위한 이동통신 설비 협의 완료</p></div>
+                </div>
+                <p class="note">※ 상기 단지 배치도 및 동호 배치표는 소비자의 이해를 돕기 위해 제작된 것으로 실제와 다를 수 있습니다.</p>
+                <p class="note">※ 설계 및 개발계획 관련 내용은 인허가 과정 및 해당기관 또는 지자체의 사정에 따라 변경될 수 있습니다.</p>
+
+                <div style="margin-top:80px">
+                    <p class="eyebrow">Premium Residence</p>
+                    <h2>PREMIUM UNIT PLAN</h2>
+                    <p class="sub">당신의 라이프스타일에 맞춘 혁신 설계<br>공간의 미학을 담은 어나드범어의 평면을 소개합니다.</p>
+                    <div class="tabs" id="units"></div>
+                    <div class="ph" id="unitImg" style="height:380px;margin-top:24px;border-radius:8px"></div>
+                    <p class="note">※ 상기 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다.</p>
+                    <p class="note">※ 발코니 확장에 따른 마감재 내역 등은 견본주택에서 반드시 확인하시기 바랍니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="center" id="location">
+            <div class="wrap">
+                <p class="eyebrow">Premium Location</p>
+                <h2>어나드범어의 압도적 입지 가치</h2>
+                <p class="sub">교육, 교통, 생활의 중심에서 누리는 프리미엄 라이프.<br>대구의 자부심, 범어의 중심에서 가장 빛나는 삶이 시작됩니다.</p>
+                <div class="loc-cards" style="text-align:left">
+                    <article class="card"><span class="material-symbols-outlined">train</span><h3>쾌속 교통망</h3><p>대구 지하철 2호선 범어역 초역세권 프리미엄과 달구벌대로, KTX 동대구역이 인접한 사통팔달 교통의 요지입니다.</p><ul><li>지하철 2호선 범어역 도보 3분</li><li>동대구역 복합환승센터 인접</li></ul></article>
+                    <article class="card"><span class="material-symbols-outlined">school</span><h3>명문 학세권</h3><p>대구를 대표하는 범어동 학원가와 명문 초·중·고교가 도보권에 위치하여 자녀를 위한 최상의 교육 환경을 제공합니다.</p><ul><li>범어동 명문 학원가 인접</li><li>도보 통학 안심 학군</li></ul></article>
+                    <article class="card"><span class="material-symbols-outlined">park</span><h3>생활 인프라</h3><p>법원, 검찰청 등 행정타운과 백화점, 대형마트, 그리고 범어공원의 쾌적한 자연까지 모두 누리는 중심 생활권입니다.</p><ul><li>범어공원 숲세권 힐링 라이프</li><li>백화점 및 관공서 인접</li></ul></article>
+                </div>
+                <div class="ph map">지도 영역 · 어나드범어 사업지 / 범어역 / 경신고 / 범어공원</div>
+                <div class="stats">
+                    <div><strong>No.1</strong>범어동 입지 가치</div>
+                    <div><strong>3min</strong>범어역 도보 거리</div>
+                    <div><strong>Top</strong>명문 학군 중심</div>
+                    <div><strong>Full</strong>완벽한 생활 인프라</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery center" id="gallery">
+            <div class="wrap">
+                <p class="eyebrow">High-End Residence</p>
+                <h2>GALLERY</h2>
+                <p class="sub">어나드범어의 품격 있는 공간. 당신의 삶을 완성하는 프리미엄 라이프스타일을 미리 만나보세요.</p>
+                <div class="tabs" id="gtabs">
+                    <button class="on" data-c="all">전체</button>
+                    <button data-c="외관">외관</button>
+                    <button data-c="인테리어">인테리어</button>
+                    <button data-c="커뮤니티">커뮤니티</button>
+                    <button data-c="조경">조경</button>
+                </div>
+                <div class="g-grid" id="ggrid"></div>
+                <p style="margin-top:28px"><button class="btn ghost" id="more" style="color:var(--navy)">더 보기 <span class="material-symbols-outlined">expand_more</span></button></p>
+            </div>
+        </section>
+
+        <section class="member" id="member">
+            <div class="wrap">
+                <div class="center">
+                    <p class="eyebrow">PREMIUM MEMBERSHIP</p>
+                    <h2>어나드범어 프리미엄의 시작, 지금 바로 등록하세요</h2>
+                    <p class="sub">VIP 관심고객으로 등록하시면 청약 일정, 분양가, 모델하우스 오픈 정보를 가장 먼저 문자메시지로 받아보실 수 있습니다.</p>
+                </div>
+                <div class="m-grid">
+                    <div>
+                        <small>24시간 분양 문의</small>
+                        <span class="tel-big">000-0000-0000</span>
+                        <h3 style="margin-bottom:8px">분양 캘린더 (예정)</h3>
+                        <ul class="sched">
+                            <li><span class="material-symbols-outlined">home_work</span><div><b>모델하우스 오픈 · 10월 예정</b><small>그랜드 오픈 및 관람 시작</small></div></li>
+                            <li><span class="material-symbols-outlined">star</span><div><b>특별공급 청약 · 10월 20일</b><small>신혼부부/생애최초 등 특별공급 접수</small></div></li>
+                            <li><span class="material-symbols-outlined">how_to_vote</span><div><b>1순위 청약 · 10월 21일</b><small>청약홈(Applyhome) 인터넷 접수</small></div></li>
+                            <li><span class="material-symbols-outlined">emoji_events</span><div><b>당첨자 발표 · 10월 28일</b><small>개별 문자 안내 및 홈페이지 게시</small></div></li>
+                        </ul>
+                    </div>
+                    <form id="form">
+                        <h3>잔여호실 상담</h3>
+                        <p class="d">상담을 원하시는 고객님의 정보를 입력해 주세요. 담당자가 확인 후 신속하게 연락드리겠습니다.</p>
+                        <label class="f">성함<input type="text" name="name" required placeholder="홍길동"></label>
+                        <label class="f">연락처<input type="tel" name="phone" required placeholder="010-0000-0000"></label>
+                        <label class="f">거주지역
+                            <select name="region" required>
+                                <option value="">지역을 선택해주세요</option>
+                                <option>대구광역시</option>
+                                <option>경상북도</option>
+                                <option>기타 지역</option>
+                            </select>
+                        </label>
+                        <label class="chk"><input type="checkbox" required> [필수] 개인정보 수집 및 이용에 동의합니다.</label>
+                        <p class="note">귀하의 정보는 분양정보 제공 목적으로만 사용됩니다. <a href="#" style="text-decoration:underline">자세히 보기</a></p>
+                        <button class="btn" type="submit">관심고객 등록하기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 어나드범어. All rights reserved.</p>
+        <p style="margin-top:6px"><a href="#">개인정보취급방침</a>|<a href="#">이용약관</a></p>
+    </footer>
+
+    <script>
+        // 평면 타입 탭
+        const units = ['136', '139', '153', '153A', '153B', '153C', '156A1', '156A2', '156B', '156C', '160', '168', '170', '226', 'P244', 'P'];
+        const uTabs = document.getElementById('units');
+        const uImg = document.getElementById('unitImg');
+        units.forEach((u, i) => {
+            const b = document.createElement('button');
+            b.textContent = u;
+            b.onclick = () => {
+                uTabs.querySelectorAll('button').forEach(x => x.classList.remove('on'));
+                b.classList.add('on');
+                uImg.textContent = u + ' Floor Plan';
+            };
+            uTabs.appendChild(b);
+            if (u === '153A') b.click();
+        });
+
+        // 갤러리
+        const items = [
+            ['인테리어', '오픈형 거실'], ['외관', '외관 야경'], ['인테리어', '프리미엄 마감재'], ['인테리어', '마스터룸 욕실'],
+            ['조경', '시그니처 가든'], ['커뮤니티', '피트니스 센터'], ['외관', '건축 디테일'], ['커뮤니티', '라운지'],
+            ['커뮤니티', '스카이라운지'], ['커뮤니티', '버라이어티존'], ['커뮤니티', '스카이커뮤니티']
+        ];
+        const grid = document.getElementById('ggrid');
+        items.forEach(([c, t]) => {
+            const d = document.createElement('div');
+            d.className = 'g-item';
+            d.dataset.c = c;
+            d.innerHTML = `<div class="ph"><span class="material-symbols-outlined">zoom_in_map</span></div><span class="cap"><small>${c}</small>${t}</span>`;
+            grid.appendChild(d);
+        });
+        let filter = 'all', limit = 8;
+        function render() {
+            let shown = 0;
+            grid.querySelectorAll('.g-item').forEach(el => {
+                const ok = filter === 'all' || el.dataset.c === filter;
+                const vis = ok && shown < limit;
+                if (ok) shown++;
+                el.classList.toggle('hide', !vis);
+            });
+            const total = [...grid.children].filter(el => filter === 'all' || el.dataset.c === filter).length;
+            document.getElementById('more').parentElement.style.display = total > limit ? '' : 'none';
+        }
+        document.getElementById('gtabs').onclick = e => {
+            if (e.target.tagName !== 'BUTTON') return;
+            document.querySelectorAll('#gtabs button').forEach(x => x.classList.remove('on'));
+            e.target.classList.add('on');
+            filter = e.target.dataset.c;
+            limit = 8;
+            render();
+        };
+        document.getElementById('more').onclick = () => { limit += 4; render(); };
+        render();
+
+        // 폼 (서버 연동 없음)
+        document.getElementById('form').onsubmit = e => {
+            e.preventDefault();
+            alert('등록이 완료되었습니다. (데모: 서버로 전송되지 않습니다)');
+            e.target.reset();
+        };
+    </script>
+</body>
+
+</html>
